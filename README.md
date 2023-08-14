@@ -1,2 +1,2 @@
 # intro-to-github
-An introduction to git and Github (via Github Desktop)
+A presentation covering the basics of git and Github (via Github Desktop)
