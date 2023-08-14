@@ -1,0 +1,197 @@
+---
+title: "Introduction to git and GitHub"
+author: "Irena Papst"
+format: revealjs
+editor: visual
+---
+
+This talk is available online here: 
+
+It features clickable links for further reading.
+
+Press "S" to reveal speaker notes and additional resources!
+
+::: notes
+Feel free to follow along with this presentation, click around, and use it as a resource in the future.
+:::
+
+## Illustrate utility of git / GitHub with vignettes
+
+-   manually managing versions with filenames
+-   finding an older version of a script
+-   working on code with others
+    -   email inbox nightmare + manually downloading
+    -   what if you want to work on the script at the same time as your colleague?
+
+# Introductions
+
+## The lingo
+
+-   `git`: version control program
+
+-   [GitHub](https://github.com/): an online service that enables you to share, backup, and collaborate on `git` repositories
+
+-   Repository ("repo"): project folder
+
+For all other terms, see the [GitHub glossary](https://docs.github.com/en/get-started/quickstart/github-glossary).
+
+## High-level overview
+
+![](figs/git-schema/Slide1.PNG){fig-align="center"}
+
+## Getting set up {background-color="white" background-image="./figs/git-schema/Slide2.PNG"}
+
+::: incremental
+1.  Register for a free GitHub account [here](https://github.com/signup)
+
+-   Here is some [useful username advice](https://happygitwithr.com/github-acct.html#username-advice) that you may want to follow.
+:::
+
+## Getting set up {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
+
+::: incremental
+1.  Install git followed by GitHub Desktop (both available in Service Gateway)
+2.  [Configure git for GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop)
+:::
+
+::: notes
+You can simply use git / GitHub from the command line, or use one of the [many other clients](https://happygitwithr.com/git-client.html#recommended-git-clients), but I think GitHub Desktop is great for beginner and intermediate users.
+:::
+
+# Working alone
+
+::: notes
+There are many ways of working with git / GitHub, but this is a useful basic workflow that I suggest would be good to start with.
+:::
+
+------------------------------------------------------------------------
+
+## Create a central remote repository on GitHub.com
+
+<iframe src="https://app.tango.us/app/embed/e374c569-9289-4953-b064-914933d48456" sandbox="allow-scripts allow-top-navigation-by-user-activation allow-popups allow-same-origin" security="restricted" title="Creating a GitHub repository" width="100%" height="85%" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen">
+
+</iframe>
+
+::: notes
+You can also have an RMarkdown file generate your README with executed R code integrated within. In this case, leave the README option unchecked and see `usethis::use_readme_rmd()`.
+:::
+
+## "Clone" a copy of the repo locally
+
+<iframe src="https://app.tango.us/app/embed/94693cd6-3ae6-41b3-9724-a2bd8dd10587" sandbox="allow-scripts allow-top-navigation-by-user-activation allow-popups allow-same-origin" security="restricted" title="Cloning a repository" width="100%" height="85%" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen">
+
+</iframe>
+
+## "Clone" a copy of the repo locally
+
+![](figs/cloning.png){fig-align="center"}
+
+## Add some content
+
+![](figs/add-content.png){fig-align="center"}
+
+::: notes
+Do we really want to track all of these files?
+
+Not all files are created equal. Some files may be very important to track for your project, while tracking others may cause unnecessary headaches as you attempt to collaborate with others on your project.
+
+Moreover, GitHub blocks files larger than 100 MB, and will give you a warning if you attempt to add or update a file that is larger than 50 MB. It's good to be mindful of file size when committing to avoid running into this issue.
+
+(You can get help on dealing with large files in GitHub repositories [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github).)
+:::
+
+------------------------------------------------------------------------
+
+## Ignore unnecessary files
+
+::: r-stack
+::: {.fragment .fade-in-then-out}
+Option 1: point and click in GitHub Desktop
+
+![](figs/ignore1.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+Option 2: point and click in GitHub Desktop
+
+![](figs/ignore2.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+Option 3: add patterns to the `.gitignore` file
+
+![](figs/ignore3.png){fig-align="center"}
+:::
+:::
+
+::: notes
+You can read more about how `git` understands patterns in a `.gitignore` file [here](https://git-scm.com/docs/gitignore#_pattern_format).
+:::
+
+## Ta-da!
+
+::: r-stack
+::: {.fragment .fade-in-then-out}
+![](figs/add-content.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/ignore4.png){fig-align="center"}
+:::
+:::
+
+## Inspect changes using "diffs"
+
+![](figs/diff.png){fig-align="center"}
+
+## Commit your changes
+
+-   show diff
+
+## Push your changes
+
+-   show how to do that in the GUI
+
+::: notes
+This is good enough if you're just working on one machine, but if you're working across two machines or with others, you'll need a few more tools
+:::
+
+# Working with others
+
+(insert Tango workflow)
+
+## Inviting collaborators
+
+::: notes
+Then they need to clone locally.
+:::
+
+## Pull from origin
+
+::: notes
+You want to start a work session doing this to synchronize with changes others may have made in the meantime.
+:::
+
+## Branching
+
+## Merge conflicts
+
+-   set one up
+-   show what it looks like in GitHub Desktop
+-   show what it looks like in the file itself
+-   resolve it
+
+## Project management with Github
+
+## Other resources
+
+-   [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/) by Jenny Bryan
+    -   A journal article
+    -   Great high-level overview
+-   [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html) by Jenny Bryan
+    -   An online textbook
+    -   Wonderful resource, though mostly command-line focused
+
+::: notes
+Much of this talk was inspired by these two resources!
+:::
