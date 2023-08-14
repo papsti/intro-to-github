@@ -144,29 +144,62 @@ You can read more about how `git` understands patterns in a `.gitignore` file [h
 
 ![](figs/diff.png){fig-align="center"}
 
+::: notes
+Diffs allow us to quickly see what's changed in a file from the previous version. Red = deletion, green = addition.
+:::
+
 ## Commit your changes
 
--   show diff
+::: r-stack
+::: {.fragment .fade-in-then-out}
+![](figs/commit.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/commit2.png){fig-align="center"}
+:::
+:::
 
 ## Push your changes
 
--   show how to do that in the GUI
+::: r-stack
+::: {.fragment .fade-in-then-out}
+![](figs/push.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/push2.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+You can see the results of that push [here](https://github.com/papsti/intro-to-github/commits/main).
+:::
+:::
 
 ::: notes
-This is good enough if you're just working on one machine, but if you're working across two machines or with others, you'll need a few more tools
+This workflow is good enough if you're just working on one machine, but if you're working across two machines or with others, you'll need a few more tools...
 :::
 
 # Working with others
 
-(insert Tango workflow)
-
 ## Inviting collaborators
+
+<iframe src="https://app.tango.us/app/embed/550631f4-1a46-4900-88ec-da0ca9bb457b" sandbox="allow-scripts allow-top-navigation-by-user-activation allow-popups allow-same-origin" security="restricted" title="Adding collaborators to a repository" width="100%" height="100%" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen"></iframe>
 
 ::: notes
 Then they need to clone locally.
 :::
 
 ## Pull from origin
+
+::: r-stack
+::: {.fragment .fade-in-then-out}
+![](figs/pull.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull2.png){fig-align="center"}
+:::
 
 ::: notes
 You want to start a work session doing this to synchronize with changes others may have made in the meantime.
