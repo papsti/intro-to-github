@@ -155,10 +155,12 @@ You can read more about how `git` understands patterns in a `.gitignore` file [h
 
 ## Inspect changes using "diffs" {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
-![](figs/diff.png){fig-align="center" width=70%}
+![](figs/diff.png){fig-align="center" width=65%}
 
 ::: aside
-Diffs allow us to quickly see what's changed in a file from the previous version. <span style="color: #87CEEB">Red</span> = deletion, <span style="color: #87CEEB">green</span> = addition.
+Diffs allow us to quickly see what's changed in a file from the previous version. 
+
+<span style="color: #b31d28">Red</span> = deletion, <span style="color: #23863a">green</span> = addition.
 :::
 
 ## Commit your changes {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
