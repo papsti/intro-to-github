@@ -13,30 +13,22 @@ This talk is available online here:
 
 
 ::: aside
-It features clickable links for further reading.
+It features clickable links for further reading or future reference.
 
 Press "S" to reveal speaker notes and additional resources!
 :::
 
-::: notes
-Feel free to follow along with this presentation, click around, and use it as a resource in the future.
-:::
-
----
+## Filename nightmares
 
 ![](figs/filename-nightmare.PNG){fig-align="center"}
 
----
+## Previous version grief
 
 ![](figs/teams-chat.jpg){fig-align="center"}
 
----
+## Collaboration pain
 
 ![](figs/teams-chat2.jpg){fig-align="center"}
-
-::: notes
-Further reading on the motivation behind using version control: sections 1-4 of [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/) by Jenny Bryan
-:::
 
 # Setting the scene
 
@@ -48,12 +40,10 @@ Further reading on the motivation behind using version control: sections 1-4 of 
 -   [GitHub](https://github.com/): an online service that enables you to share, backup, and collaborate on `git` repositories
 
 -   Repository ("repo"): project folder
-
-- For all other terms, see the [GitHub glossary](https://docs.github.com/en/get-started/quickstart/github-glossary).
 :::
 
-::: notes
-Further reading about repositories [here](https://happygitwithr.com/git-basics.html#repos-or-repositories).
+::: aside
+More terms defined in the [GitHub glossary](https://docs.github.com/en/get-started/quickstart/github-glossary).
 :::
 
 ## High-level overview
@@ -66,7 +56,7 @@ Further reading about repositories [here](https://happygitwithr.com/git-basics.h
 1.  Register for a free GitHub account [here](https://github.com/signup)
 :::
 
-::: notes
+::: aside
 Here is some [useful username advice](https://happygitwithr.com/github-acct.html#username-advice) that you may want to follow.
 :::
 
@@ -77,14 +67,14 @@ Here is some [useful username advice](https://happygitwithr.com/github-acct.html
 3.  [Configure git for GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop)
 :::
 
-::: notes
-You can simply use git / GitHub from the command line, or use one of the [many other clients](https://happygitwithr.com/git-client.html#recommended-git-clients), but I think GitHub Desktop is great for beginner and intermediate users.
+::: aside
+You can simply use git / GitHub from the command line, or use one of the [many other clients](https://happygitwithr.com/git-client.html#recommended-git-clients), but I think GitHub Desktop is great for beginner and even intermediate users.
 :::
 
 # Working alone {background-color="white" background-image="./figs/git-schema/Slide20.PNG"}
 
 ::: notes
-There are many ways of working with git / GitHub, but this is a useful basic workflow that I suggest would be good to start with. 
+There are many ways of working with git / GitHub, but this is a useful basic workflow that I suggest would be good to start with.
 :::
 
 ------------------------------------------------------------------------
@@ -95,7 +85,7 @@ There are many ways of working with git / GitHub, but this is a useful basic wor
 
 </iframe>
 
-::: notes
+::: aside
 You can also have an RMarkdown file generate your README with executed R code integrated within. In this case, leave the README option unchecked and see `usethis::use_readme_rmd()`.
 :::
 
@@ -113,16 +103,16 @@ You can also have an RMarkdown file generate your README with executed R code in
 
 ![](figs/add-content.png){fig-align="center"}
 
+::: aside
+Further reading on which files to commit: section 10 of [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/) by Jenny Bryan
+:::
+
 ::: notes
 Do we really want to track all of these files?
 
 Not all files are created equal. Some files may be very important to track for your project, while tracking others may cause unnecessary headaches as you attempt to collaborate with others on your project.
 
 Moreover, GitHub blocks files larger than 100 MB, and will give you a warning if you attempt to add or update a file that is larger than 50 MB. It's good to be mindful of file size when committing to avoid running into this issue.
-
-(You can get help on dealing with large files in GitHub repositories [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github).)
-
-Further reading on which files to commit: section 10 of [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/) by Jenny Bryan
 :::
 
 ## Ignore unnecessary files {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
@@ -147,7 +137,7 @@ Option 3: add patterns to the `.gitignore` file
 :::
 :::
 
-::: notes
+::: aside
 You can read more about how `git` understands patterns in a `.gitignore` file [here](https://git-scm.com/docs/gitignore#_pattern_format).
 :::
 
@@ -165,10 +155,10 @@ You can read more about how `git` understands patterns in a `.gitignore` file [h
 
 ## Inspect changes using "diffs" {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
-![](figs/diff.png){fig-align="center"}
+![](figs/diff.png){fig-align="center" width=70%}
 
-::: notes
-Diffs allow us to quickly see what's changed in a file from the previous version. Red = deletion, green = addition.
+::: aside
+Diffs allow us to quickly see what's changed in a file from the previous version. <span style="color: #87CEEB">Red</span> = deletion, <span style="color: #87CEEB">green</span> = addition.
 :::
 
 ## Commit your changes {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
@@ -227,8 +217,8 @@ Then they need to clone locally.
 :::
 :::
 
-::: notes
-You want to start a work session doing this to synchronize with changes others may have made in the meantime.
+::: aside
+You want to start a work session with a pull to synchronize with changes others may have made in the meantime.
 :::
 
 ## Branching
@@ -275,7 +265,7 @@ You want to start a work session doing this to synchronize with changes others m
 :::
 :::
 
-::: notes
+::: aside
 Further reading on branches: section 11 of [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/) by Jenny Bryan
 :::
 
@@ -327,9 +317,10 @@ Further reading on branches: section 11 of [Excuse me, do you have a moment to t
 
 ::: r-stack
 ::: {.fragment .fade-in-then-out}
-According to [the GitHub Docs page on merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts):
-
-> Git can often resolve differences between branches and merge them automatically. Usually, the changes are on different lines, or even in different files, which makes the merge simple for computers to understand. However, sometimes there are competing changes that Git can't resolve without your help. Often, merge conflicts happen when people make different changes to the same line of the same file, or when one person edits a file and another person deletes the same file.
+- `git` is great at automatically consolidating sets of changes between versions
+- When it needs help, it creates a [**merge conflict**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts) to flag conflicting changes
+  - _e.g._ when two people make different change to the same part of the same file
+- Fear not!
 :::
 
 ::: {.fragment .fade-in-then-out}
@@ -351,23 +342,57 @@ According to [the GitHub Docs page on merge conflicts](https://docs.github.com/e
 
 # The rewards
 
-## Clear timelines
+## Managing version history
 
+::: r-stack
+::: {.fragment .fade-in-then-out}
+![](figs/filename-nightmare.PNG){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+insert screenshot of file history
+:::
+
+::: {.fragment .fade-in-then-out}
 ![](figs/timeline.png){fig-align="center"}
+:::
 
 ::: notes
-Useful for reporting to your collaborators or boss
+Also useful for reporting to your collaborators or boss!
+:::
 :::
 
 ## Easily go back to a previous version
 
+::: r-stack
+::: {.fragment .fade-in-then-out}
 ![](figs/rollback.png){fig-align="center"}
+:::
+::: {.fragment .fade-in-then-out}
+![](figs/teams-chat.jpg){fig-align="center"}
+:::
+:::
 
 ::: notes
-Now that you've consistently tracked your progress on this project, your reward is that it's very easy to go back! This works best if you write descriptive commit messages...
+This works best if you write descriptive commit messages...
+:::
+
+## Collaborate simultaneously
+
+::: r-stack
+::: {.fragment .fade-in-then-out}
+![](figs/teams-chat2.jpg){fig-align="center"}
+:::
+::: {.fragment .fade-in-then-out}
+diagram of multiple branches
+:::
 :::
 
 ## Project management with Github
+
+::: notes
+Here are some more rewards you didn't know you needed.
+:::
 
 ::: {.fragment}
 - [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues), [Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones), [Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
@@ -393,6 +418,13 @@ Issue
 - Let's look at [an example](https://github.com/phac-nml-phrsd/ern/issues/144)...
 :::
 
+## "Code" reviews
+
+::: incremental
+- Track changes-like editing/commenting for code and/or text
+- Let's look at an example...
+:::
+
 # Summary of workflow
 
 ::: r-stack
@@ -404,7 +436,7 @@ Issue
 5.  Create a **new branch** from the version of the code where you want to complete this task. The sole purpose of this branch is to address the issue.
 :::
 
-::: {.fragment .fade-in-then-out}
+::: {.fragment}
 6.  **Commit** changes addressing this issue and **push** to remote every so often.
 7.  Once you're satisfied that you've addressed the issue, push one final time, and then open a **pull request**. Use [keywords](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword#linking-a-pull-request-to-an-issue-using-a-keyword) in your pull request to close issues that have been addressed. 
 8. Optionally solicit a **code review** from a collaborator. 
@@ -423,6 +455,6 @@ Issue
     -   An online textbook
     -   Wonderful resource, though mostly command-line focused
 
-::: notes
+::: aside
 Much of this talk was inspired by these two resources!
 :::
