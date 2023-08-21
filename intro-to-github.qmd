@@ -129,15 +129,15 @@ Option 2: point and click in GitHub Desktop
 
 ![](figs/ignore2.png){fig-align="center"}
 :::
+:::
 
-::: {.fragment .fade-in-then-out}
+## Ignore unnecessary files {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
+
 Option 3: add patterns to the `.gitignore` file
 
 ![](figs/ignore3.png){fig-align="center"}
-:::
-:::
 
-::: aside
+::: {.aside}
 You can read more about how `git` understands patterns in a `.gitignore` file [here](https://git-scm.com/docs/gitignore#_pattern_format).
 :::
 
@@ -336,10 +336,13 @@ Further reading on branches: section 11 of [Excuse me, do you have a moment to t
 ::: {.fragment .fade-in-then-out}
 ![](figs/merge-conflict3.png){fig-align="center"}
 :::
-
-::: {.fragment .fade-in-then-out}
-![](figs/merge-conflict4.png){fig-align="center"}
 :::
+
+## Merge conflicts
+![](figs/merge-conflict4.png){fig-align="center" width=70%}
+
+::: aside
+Occasionally you may get in too deep with a merge conflict, in which case it may be best to start fresh [by (safely) deleting your local version of a branch/repo and re-cloning it from the origin](https://happygitwithr.com/burn.html).
 :::
 
 # The rewards
