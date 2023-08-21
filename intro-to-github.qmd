@@ -3,37 +3,58 @@ title: "Introduction to git and GitHub"
 author: "Irena Papst"
 format: revealjs
 editor: visual
+title-slide-attributes:
+  data-background-image: figs/git-schema/Slide22.PNG
+  data-background-size: contain
+  data-background-opacity: "0.5"
 ---
 
 This talk is available online here: 
 
+
+::: aside
 It features clickable links for further reading.
 
 Press "S" to reveal speaker notes and additional resources!
+:::
 
 ::: notes
 Feel free to follow along with this presentation, click around, and use it as a resource in the future.
 :::
 
-## Illustrate utility of git / GitHub with vignettes
+---
 
--   manually managing versions with filenames
--   finding an older version of a script
--   working on code with others
-    -   email inbox nightmare + manually downloading
-    -   what if you want to work on the script at the same time as your colleague?
+![](figs/filename-nightmare.PNG){fig-align="center"}
 
-# Introductions
+---
+
+![](figs/teams-chat.jpg){fig-align="center"}
+
+---
+
+![](figs/teams-chat2.jpg){fig-align="center"}
+
+::: notes
+Further reading on the motivation behind using version control: sections 1-4 of [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/) by Jenny Bryan
+:::
+
+# Setting the scene
 
 ## The lingo
 
+::: incremental
 -   `git`: version control program
 
 -   [GitHub](https://github.com/): an online service that enables you to share, backup, and collaborate on `git` repositories
 
 -   Repository ("repo"): project folder
 
-For all other terms, see the [GitHub glossary](https://docs.github.com/en/get-started/quickstart/github-glossary).
+- For all other terms, see the [GitHub glossary](https://docs.github.com/en/get-started/quickstart/github-glossary).
+:::
+
+::: notes
+Further reading about repositories [here](https://happygitwithr.com/git-basics.html#repos-or-repositories).
+:::
 
 ## High-level overview
 
@@ -43,30 +64,32 @@ For all other terms, see the [GitHub glossary](https://docs.github.com/en/get-st
 
 ::: incremental
 1.  Register for a free GitHub account [here](https://github.com/signup)
+:::
 
--   Here is some [useful username advice](https://happygitwithr.com/github-acct.html#username-advice) that you may want to follow.
+::: notes
+Here is some [useful username advice](https://happygitwithr.com/github-acct.html#username-advice) that you may want to follow.
 :::
 
 ## Getting set up {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
 ::: incremental
-1.  Install git followed by GitHub Desktop (both available in Service Gateway)
-2.  [Configure git for GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop)
+2.  Install git followed by GitHub Desktop (both available in Service Gateway)
+3.  [Configure git for GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop)
 :::
 
 ::: notes
 You can simply use git / GitHub from the command line, or use one of the [many other clients](https://happygitwithr.com/git-client.html#recommended-git-clients), but I think GitHub Desktop is great for beginner and intermediate users.
 :::
 
-# Working alone
+# Working alone {background-color="white" background-image="./figs/git-schema/Slide20.PNG"}
 
 ::: notes
-There are many ways of working with git / GitHub, but this is a useful basic workflow that I suggest would be good to start with.
+There are many ways of working with git / GitHub, but this is a useful basic workflow that I suggest would be good to start with. 
 :::
 
 ------------------------------------------------------------------------
 
-## Create a central remote repository on GitHub.com
+## Create a central remote repository on GitHub.com {background-color="white" background-image="./figs/git-schema/Slide2.PNG"}
 
 <iframe src="https://app.tango.us/app/embed/e374c569-9289-4953-b064-914933d48456" sandbox="allow-scripts allow-top-navigation-by-user-activation allow-popups allow-same-origin" security="restricted" title="Creating a GitHub repository" width="100%" height="85%" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen">
 
@@ -76,17 +99,17 @@ There are many ways of working with git / GitHub, but this is a useful basic wor
 You can also have an RMarkdown file generate your README with executed R code integrated within. In this case, leave the README option unchecked and see `usethis::use_readme_rmd()`.
 :::
 
-## "Clone" a copy of the repo locally
+## "Clone" a copy of the repo locally {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
 <iframe src="https://app.tango.us/app/embed/94693cd6-3ae6-41b3-9724-a2bd8dd10587" sandbox="allow-scripts allow-top-navigation-by-user-activation allow-popups allow-same-origin" security="restricted" title="Cloning a repository" width="100%" height="85%" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen">
 
 </iframe>
 
-## "Clone" a copy of the repo locally
+## "Clone" a copy of the repo locally {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
 ![](figs/cloning.png){fig-align="center"}
 
-## Add some content
+## Add some content {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
 ![](figs/add-content.png){fig-align="center"}
 
@@ -98,17 +121,17 @@ Not all files are created equal. Some files may be very important to track for y
 Moreover, GitHub blocks files larger than 100 MB, and will give you a warning if you attempt to add or update a file that is larger than 50 MB. It's good to be mindful of file size when committing to avoid running into this issue.
 
 (You can get help on dealing with large files in GitHub repositories [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github).)
+
+Further reading on which files to commit: section 10 of [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/) by Jenny Bryan
 :::
 
-------------------------------------------------------------------------
-
-## Ignore unnecessary files
+## Ignore unnecessary files {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
 ::: r-stack
 ::: {.fragment .fade-in-then-out}
 Option 1: point and click in GitHub Desktop
 
-![](figs/ignore1.png){fig-align="center"}
+![](figs/ignore.png){fig-align="center"}
 :::
 
 ::: {.fragment .fade-in-then-out}
@@ -128,7 +151,7 @@ Option 3: add patterns to the `.gitignore` file
 You can read more about how `git` understands patterns in a `.gitignore` file [here](https://git-scm.com/docs/gitignore#_pattern_format).
 :::
 
-## Ta-da!
+## Ta-da! {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
 ::: r-stack
 ::: {.fragment .fade-in-then-out}
@@ -140,7 +163,7 @@ You can read more about how `git` understands patterns in a `.gitignore` file [h
 :::
 :::
 
-## Inspect changes using "diffs"
+## Inspect changes using "diffs" {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
 ![](figs/diff.png){fig-align="center"}
 
@@ -148,7 +171,7 @@ You can read more about how `git` understands patterns in a `.gitignore` file [h
 Diffs allow us to quickly see what's changed in a file from the previous version. Red = deletion, green = addition.
 :::
 
-## Commit your changes
+## Commit your changes {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
 ::: r-stack
 ::: {.fragment .fade-in-then-out}
@@ -160,7 +183,7 @@ Diffs allow us to quickly see what's changed in a file from the previous version
 :::
 :::
 
-## Push your changes
+## Push your changes {background-color="white" background-image="./figs/git-schema/Slide4.PNG"}
 
 ::: r-stack
 ::: {.fragment .fade-in-then-out}
@@ -182,7 +205,9 @@ This workflow is good enough if you're just working on one machine, but if you'r
 
 # Working with others
 
-## Inviting collaborators
+![](figs/git-schema/Slide6.PNG){fig-align="center"}
+
+## Inviting collaborators {background-color="white" background-image="./figs/git-schema/Slide7.PNG"}
 
 <iframe src="https://app.tango.us/app/embed/550631f4-1a46-4900-88ec-da0ca9bb457b" sandbox="allow-scripts allow-top-navigation-by-user-activation allow-popups allow-same-origin" security="restricted" title="Adding collaborators to a repository" width="100%" height="100%" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen"></iframe>
 
@@ -190,7 +215,7 @@ This workflow is good enough if you're just working on one machine, but if you'r
 Then they need to clone locally.
 :::
 
-## Pull from origin
+## Pull from origin {background-color="white" background-image="./figs/git-schema/Slide11.PNG"}
 
 ::: r-stack
 ::: {.fragment .fade-in-then-out}
@@ -200,6 +225,7 @@ Then they need to clone locally.
 ::: {.fragment .fade-in-then-out}
 ![](figs/pull2.png){fig-align="center"}
 :::
+:::
 
 ::: notes
 You want to start a work session doing this to synchronize with changes others may have made in the meantime.
@@ -207,14 +233,186 @@ You want to start a work session doing this to synchronize with changes others m
 
 ## Branching
 
+::: r-stack
+::: {.fragment .fade-in-then-out}
+![](figs/git-schema/Slide14.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/git-schema/Slide15.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/git-schema/Slide16.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/git-schema/Slide17.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/git-schema/Slide18.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/git-schema/Slide19.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/branching.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/branching2.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/branching3.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/branching4.png){fig-align="center"}
+:::
+:::
+
+::: notes
+Further reading on branches: section 11 of [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/) by Jenny Bryan
+:::
+
+## Pull request
+
+::: r-stack
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request2.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request3.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request4.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request5.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request6.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request7.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/delete-branch.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/delete-branch2.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/delete-branch3.png){fig-align="center"}
+:::
+:::
+
 ## Merge conflicts
 
--   set one up
--   show what it looks like in GitHub Desktop
--   show what it looks like in the file itself
--   resolve it
+::: r-stack
+::: {.fragment .fade-in-then-out}
+According to [the GitHub Docs page on merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts):
+
+> Git can often resolve differences between branches and merge them automatically. Usually, the changes are on different lines, or even in different files, which makes the merge simple for computers to understand. However, sometimes there are competing changes that Git can't resolve without your help. Often, merge conflicts happen when people make different changes to the same line of the same file, or when one person edits a file and another person deletes the same file.
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/merge-conflict.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/merge-conflict2.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/merge-conflict3.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/merge-conflict4.png){fig-align="center"}
+:::
+:::
+
+# The rewards
+
+## Clear timelines
+
+![](figs/timeline.png){fig-align="center"}
+
+::: notes
+Useful for reporting to your collaborators or boss
+:::
+
+## Easily go back to a previous version
+
+![](figs/rollback.png){fig-align="center"}
+
+::: notes
+Now that you've consistently tracked your progress on this project, your reward is that it's very easy to go back! This works best if you write descriptive commit messages...
+:::
 
 ## Project management with Github
+
+::: {.fragment}
+- [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues), [Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones), [Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+:::
+
+::: r-stack
+
+::: {.fragment .fade-in-then-out}
+Issue
+:::
+
+::: {.fragment .fade-in}
+~~Issue~~ (Action) Item
+:::
+
+:::
+
+::: {.fragment .fade-in}
+  - For example: fixing a bug, implementing a new feature, documenting your work, writing a report, etc.
+:::
+
+::: {.fragment .fade-in}
+- Let's look at [an example](https://github.com/phac-nml-phrsd/ern/issues/144)...
+:::
+
+# Summary of workflow
+
+::: r-stack
+::: {.fragment .fade-out}
+1.  Create a **remote repository** to house your project on GitHub.com.
+2.  You and all collaborators should **clone** a copy of the repository locally to their own machine.
+3. Create a first, minimal version of your project code. **Commit** it to the `main` branch of your repository.
+4. Decide on a "feature" (analysis, plot, manuscript text chunk, etc.) that you want to create or edit. Create a **GitHub issue** associated with this action item.
+5.  Create a **new branch** from the version of the code where you want to complete this task. The sole purpose of this branch is to address the issue.
+:::
+
+::: {.fragment .fade-in-then-out}
+6.  **Commit** changes addressing this issue and **push** to remote every so often.
+7.  Once you're satisfied that you've addressed the issue, push one final time, and then open a **pull request**. Use [keywords](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword#linking-a-pull-request-to-an-issue-using-a-keyword) in your pull request to close issues that have been addressed. 
+8. Optionally solicit a **code review** from a collaborator. 
+9. Once any code review is complete, **merge** the pull request into the original branch from which you branched.
+8.  **Delete** the new feature branch.
+9.  **Rinse and repeat** steps 4-8 until your project is done!
+:::
+:::
 
 ## Other resources
 
