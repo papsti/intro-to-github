@@ -1,7 +1,9 @@
 ---
 title: "Introduction to git and GitHub"
 author: "Irena Papst"
-format: revealjs
+format: 
+  revealjs:
+    auto-stretch: false
 editor: visual
 title-slide-attributes:
   data-background-image: figs/git-schema/Slide22.PNG
@@ -9,18 +11,18 @@ title-slide-attributes:
   data-background-opacity: "0.5"
 ---
 
-This talk is available online here: 
-
+This talk is available online here:
 
 ::: aside
 It features clickable links for further reading or future reference.
-
-Press "S" to reveal speaker notes and additional resources!
 :::
 
 ## Filename nightmares
 
-![](figs/filename-nightmare.PNG){fig-align="center"}
+<br>
+<br>
+
+![](figs/filename-nightmare.PNG){fig-align="center" width="50%"}
 
 ## Previous version grief
 
@@ -28,19 +30,20 @@ Press "S" to reveal speaker notes and additional resources!
 
 ## Collaboration pain
 
+<br>
+<br>
+
 ![](figs/teams-chat2.jpg){fig-align="center"}
 
 # Setting the scene
 
 ## The lingo
 
-::: incremental
 -   `git`: version control program
 
 -   [GitHub](https://github.com/): an online service that enables you to share, backup, and collaborate on `git` repositories
 
 -   Repository ("repo"): project folder
-:::
 
 ::: aside
 More terms defined in the [GitHub glossary](https://docs.github.com/en/get-started/quickstart/github-glossary).
@@ -52,9 +55,7 @@ More terms defined in the [GitHub glossary](https://docs.github.com/en/get-start
 
 ## Getting set up {background-color="white" background-image="./figs/git-schema/Slide2.PNG"}
 
-::: incremental
 1.  Register for a free GitHub account [here](https://github.com/signup)
-:::
 
 ::: aside
 Here is some [useful username advice](https://happygitwithr.com/github-acct.html#username-advice) that you may want to follow.
@@ -62,10 +63,8 @@ Here is some [useful username advice](https://happygitwithr.com/github-acct.html
 
 ## Getting set up {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
-::: incremental
 2.  Install git followed by GitHub Desktop (both available in Service Gateway)
 3.  [Configure git for GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop)
-:::
 
 ::: aside
 You can simply use git / GitHub from the command line, or use one of the [many other clients](https://happygitwithr.com/git-client.html#recommended-git-clients), but I think GitHub Desktop is great for beginner and even intermediate users.
@@ -81,13 +80,40 @@ There are many ways of working with git / GitHub, but this is a useful basic wor
 
 ## Create a central remote repository on GitHub.com {background-color="white" background-image="./figs/git-schema/Slide2.PNG"}
 
-<iframe src="https://app.tango.us/app/embed/e374c569-9289-4953-b064-914933d48456" sandbox="allow-scripts allow-top-navigation-by-user-activation allow-popups allow-same-origin" security="restricted" title="Creating a GitHub repository" width="100%" height="85%" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen">
+::: r-stack
+::: {.fragment .fade-in-then-out}
+![](figs/create-repo.png){fig-align="center"}
+:::
 
-</iframe>
+::: {.fragment .fade-in-then-out}
+![](figs/create-repo2.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/create-repo3.png){fig-align="center"}
+:::
+:::
+
+## Create a central remote repository on GitHub.com {background-color="white" background-image="./figs/git-schema/Slide2.PNG"}
+
+![](figs/create-repo3.png){fig-align="center" width="60%"}
 
 ::: aside
 You can also have an RMarkdown file generate your README with executed R code integrated within. In this case, leave the README option unchecked and see `usethis::use_readme_rmd()`.
 :::
+
+## Create a central remote repository on GitHub.com {background-color="white" background-image="./figs/git-schema/Slide2.PNG"}
+
+::: r-stack
+::: {.fragment .fade-in-then-out}
+![](figs/create-repo4.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/create-repo5.png){fig-align="center"}
+:::
+:::
+
 
 ## "Clone" a copy of the repo locally {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
@@ -137,7 +163,7 @@ Option 3: add patterns to the `.gitignore` file
 
 ![](figs/ignore3.png){fig-align="center"}
 
-::: {.aside}
+::: aside
 You can read more about how `git` understands patterns in a `.gitignore` file [here](https://git-scm.com/docs/gitignore#_pattern_format).
 :::
 
@@ -155,12 +181,12 @@ You can read more about how `git` understands patterns in a `.gitignore` file [h
 
 ## Inspect changes using "diffs" {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
-![](figs/diff.png){fig-align="center" width=65%}
+![](figs/diff.png){fig-align="center" width="65%"}
 
 ::: aside
-Diffs allow us to quickly see what's changed in a file from the previous version. 
+Diffs allow us to quickly see what's changed in a file from the previous version.
 
-<span style="color: #b31d28">Red</span> = deletion, <span style="color: #23863a">green</span> = addition.
+[Red]{style="color: #b31d28"} = deletion, [green]{style="color: #23863a"} = addition.
 :::
 
 ## Commit your changes {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
@@ -201,7 +227,9 @@ This workflow is good enough if you're just working on one machine, but if you'r
 
 ## Inviting collaborators {background-color="white" background-image="./figs/git-schema/Slide7.PNG"}
 
-<iframe src="https://app.tango.us/app/embed/550631f4-1a46-4900-88ec-da0ca9bb457b" sandbox="allow-scripts allow-top-navigation-by-user-activation allow-popups allow-same-origin" security="restricted" title="Adding collaborators to a repository" width="100%" height="100%" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen"></iframe>
+<iframe src="https://app.tango.us/app/embed/550631f4-1a46-4900-88ec-da0ca9bb457b" sandbox="allow-scripts allow-top-navigation-by-user-activation allow-popups allow-same-origin" security="restricted" title="Adding collaborators to a repository" width="100%" height="100%" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen">
+
+</iframe>
 
 ::: notes
 Then they need to clone locally.
@@ -319,10 +347,10 @@ Further reading on branches: section 11 of [Excuse me, do you have a moment to t
 
 ::: r-stack
 ::: {.fragment .fade-in-then-out}
-- `git` is great at automatically consolidating sets of changes between versions
-- When it needs help, it creates a [**merge conflict**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts) to flag conflicting changes
-  - _e.g._ when two people make different change to the same part of the same file
-- Fear not!
+-   `git` is great at automatically consolidating sets of changes between versions
+-   When it needs help, it creates a [**merge conflict**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts) to flag conflicting changes
+    -   *e.g.* when two people make different change to the same part of the same file
+-   Fear not!
 :::
 
 ::: {.fragment .fade-in-then-out}
@@ -339,7 +367,8 @@ Further reading on branches: section 11 of [Excuse me, do you have a moment to t
 :::
 
 ## Merge conflicts
-![](figs/merge-conflict4.png){fig-align="center" width=70%}
+
+![](figs/merge-conflict4.png){fig-align="center" width="70%"}
 
 ::: aside
 Occasionally you may get in too deep with a merge conflict, in which case it may be best to start fresh [by (safely) deleting your local version of a branch/repo and re-cloning it from the origin](https://happygitwithr.com/burn.html).
@@ -373,6 +402,7 @@ Also useful for reporting to your collaborators or boss!
 ::: {.fragment .fade-in-then-out}
 ![](figs/rollback.png){fig-align="center"}
 :::
+
 ::: {.fragment .fade-in-then-out}
 ![](figs/teams-chat.jpg){fig-align="center"}
 :::
@@ -388,6 +418,7 @@ This works best if you write descriptive commit messages...
 ::: {.fragment .fade-in-then-out}
 ![](figs/teams-chat2.jpg){fig-align="center"}
 :::
+
 ::: {.fragment .fade-in-then-out}
 diagram of multiple branches
 :::
@@ -399,12 +430,11 @@ diagram of multiple branches
 Here are some more rewards you didn't know you needed.
 :::
 
-::: {.fragment}
-- [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues), [Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones), [Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+::: fragment
+-   [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues), [Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones), [Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 :::
 
 ::: r-stack
-
 ::: {.fragment .fade-in-then-out}
 Issue
 :::
@@ -412,22 +442,21 @@ Issue
 ::: {.fragment .fade-in}
 ~~Issue~~ (Action) Item
 :::
-
 :::
 
 ::: {.fragment .fade-in}
-  - For example: fixing a bug, implementing a new feature, documenting your work, writing a report, etc.
+-   For example: fixing a bug, implementing a new feature, documenting your work, writing a report, etc.
 :::
 
 ::: {.fragment .fade-in}
-- Let's look at [an example](https://github.com/phac-nml-phrsd/ern/issues/144)...
+-   Let's look at [an example](https://github.com/phac-nml-phrsd/ern/issues/144)...
 :::
 
 ## "Code" reviews
 
 ::: incremental
-- Track changes-like editing/commenting for code and/or text
-- Let's look at an example...
+-   Track changes-like editing/commenting for code and/or text
+-   Let's look at an example...
 :::
 
 # Summary of workflow
@@ -436,18 +465,18 @@ Issue
 ::: {.fragment .fade-out}
 1.  Create a **remote repository** to house your project on GitHub.com.
 2.  You and all collaborators should **clone** a copy of the repository locally to their own machine.
-3. Create a first, minimal version of your project code. **Commit** it to the `main` branch of your repository.
-4. Decide on a "feature" (analysis, plot, manuscript text chunk, etc.) that you want to create or edit. Create a **GitHub issue** associated with this action item.
+3.  Create a first, minimal version of your project code. **Commit** it to the `main` branch of your repository.
+4.  Decide on a "feature" (analysis, plot, manuscript text chunk, etc.) that you want to create or edit. Create a **GitHub issue** associated with this action item.
 5.  Create a **new branch** from the version of the code where you want to complete this task. The sole purpose of this branch is to address the issue.
 :::
 
-::: {.fragment}
+::: fragment
 6.  **Commit** changes addressing this issue and **push** to remote every so often.
-7.  Once you're satisfied that you've addressed the issue, push one final time, and then open a **pull request**. Use [keywords](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword#linking-a-pull-request-to-an-issue-using-a-keyword) in your pull request to close issues that have been addressed. 
-8. Optionally solicit a **code review** from a collaborator. 
-9. Once any code review is complete, **merge** the pull request into the original branch from which you branched.
-8.  **Delete** the new feature branch.
-9.  **Rinse and repeat** steps 4-8 until your project is done!
+7.  Once you're satisfied that you've addressed the issue, push one final time, and then open a **pull request**. Use [keywords](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword#linking-a-pull-request-to-an-issue-using-a-keyword) in your pull request to close issues that have been addressed.
+8.  Optionally solicit a **code review** from a collaborator.
+9.  Once any code review is complete, **merge** the pull request into the original branch from which you branched.
+10. **Delete** the new feature branch.
+11. **Rinse and repeat** steps 4-8 until your project is done!
 :::
 :::
 
