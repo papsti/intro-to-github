@@ -89,7 +89,7 @@ There are many ways of working with git / GitHub, but this is a useful basic wor
 ![](figs/create-repo2.png){fig-align="center"}
 :::
 
-::: {.fragment .fade-in-then-out}
+::: {.fragment .fade-in}
 ![](figs/create-repo3.png){fig-align="center"}
 :::
 :::
@@ -105,33 +105,47 @@ You can also have an RMarkdown file generate your README with executed R code in
 ## Create a central remote repository on GitHub.com {background-color="white" background-image="./figs/git-schema/Slide2.PNG"}
 
 ::: r-stack
+::: {.fragment .fade-out}
+![](figs/create-repo4.png){fig-align="center" width="80%"}
+:::
+
+::: {.fragment .fade-in}
+![](figs/create-repo5.png){fig-align="center" width="80%"}
+:::
+:::
+
+## "Clone" a copy of the repo locally {background-color="white" background-image="./figs/git-schema/Slide2.PNG"}
+
+
+::: r-stack
 ::: {.fragment .fade-in-then-out}
-![](figs/create-repo4.png){fig-align="center"}
+![](figs/clone-repo.png){fig-align="center" width="80%"}
 :::
 
 ::: {.fragment .fade-in-then-out}
-![](figs/create-repo5.png){fig-align="center"}
+![](figs/clone-repo2.png){fig-align="center" width="80%"}
 :::
 :::
-
 
 ## "Clone" a copy of the repo locally {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
-<iframe src="https://app.tango.us/app/embed/94693cd6-3ae6-41b3-9724-a2bd8dd10587" sandbox="allow-scripts allow-top-navigation-by-user-activation allow-popups allow-same-origin" security="restricted" title="Cloning a repository" width="100%" height="85%" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen">
+::: r-stack
+::: {.fragment .fade-in-then-out}
+![](figs/clone-repo3.png){fig-align="center" width="80%"}
+:::
 
-</iframe>
+::: {.fragment .fade-out}
+![](figs/clone-repo4.png){fig-align="center" width="80%"}
+:::
 
-## "Clone" a copy of the repo locally {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
-
-![](figs/cloning.png){fig-align="center"}
+::: {.fragment .fade-in-then-out}
+![](figs/clone-repo5.png){fig-align="center" width="80%"}
+:::
+:::
 
 ## Add some content {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
-![](figs/add-content.png){fig-align="center"}
-
-::: aside
-Further reading on which files to commit: section 10 of [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/) by Jenny Bryan
-:::
+![](figs/add-content.png){fig-align="center" width="90%"}
 
 ::: notes
 Do we really want to track all of these files?
@@ -144,16 +158,16 @@ Moreover, GitHub blocks files larger than 100 MB, and will give you a warning if
 ## Ignore unnecessary files {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
 ::: r-stack
-::: {.fragment .fade-in-then-out}
+::: {.fragment .fade-out}
 Option 1: point and click in GitHub Desktop
 
-![](figs/ignore.png){fig-align="center"}
+![](figs/ignore.png){fig-align="center" width="80%"}
 :::
 
-::: {.fragment .fade-in-then-out}
+::: {.fragment .fade-in}
 Option 2: point and click in GitHub Desktop
 
-![](figs/ignore2.png){fig-align="center"}
+![](figs/ignore2.png){fig-align="center" width="80%"}
 :::
 :::
 
@@ -161,21 +175,37 @@ Option 2: point and click in GitHub Desktop
 
 Option 3: add patterns to the `.gitignore` file
 
+::: r-stack
+::: {.fragment .fade-out}
 ![](figs/ignore3.png){fig-align="center"}
+:::
+
+::: {.fragment .fade-in}
+![](figs/ignore4.png){fig-align="center"}
+:::
+:::
+
+## Ignore unnecessary files {.nostretch background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
+
+Option 3: add patterns to the `.gitignore` file
+
+![](figs/ignore4.png){fig-align="center" width="34%"}
 
 ::: aside
 You can read more about how `git` understands patterns in a `.gitignore` file [here](https://git-scm.com/docs/gitignore#_pattern_format).
+
+Further reading on which files to commit: section 10 of [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/) by Jenny Bryan
 :::
 
 ## Ta-da! {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
 ::: r-stack
-::: {.fragment .fade-in-then-out}
-![](figs/add-content.png){fig-align="center"}
+::: {.fragment .fade-out}
+![](figs/add-content.png){fig-align="center" width="80%"}
 :::
 
-::: {.fragment .fade-in-then-out}
-![](figs/ignore4.png){fig-align="center"}
+::: {.fragment .fade-in}
+![](figs/ignore5.png){fig-align="center" width="80%"}
 :::
 :::
 
@@ -192,28 +222,28 @@ Diffs allow us to quickly see what's changed in a file from the previous version
 ## Commit your changes {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
 ::: r-stack
-::: {.fragment .fade-in-then-out}
-![](figs/commit.png){fig-align="center"}
+::: {.fragment .fade-out}
+![](figs/commit.png){fig-align="center" width="80%"}
 :::
 
-::: {.fragment .fade-in-then-out}
-![](figs/commit2.png){fig-align="center"}
+::: {.fragment .fade-in}
+![](figs/commit2.png){fig-align="center" width="80%"}
 :::
 :::
 
 ## Push your changes {background-color="white" background-image="./figs/git-schema/Slide4.PNG"}
 
 ::: r-stack
-::: {.fragment .fade-in-then-out}
-![](figs/push.png){fig-align="center"}
+::: {.fragment .fade-out}
+![](figs/push.png){fig-align="center" width="80%"}
 :::
 
 ::: {.fragment .fade-in-then-out}
-![](figs/push2.png){fig-align="center"}
+![](figs/push2.png){fig-align="center" width="80%"}
 :::
 
-::: {.fragment .fade-in-then-out}
-You can see the results of that push [here](https://github.com/papsti/intro-to-github/commits/main).
+::: {.fragment .fade-in}
+You can see the results of that push [here](https://github.com/papsti/intro-to-github-demo/commit/807277faed76571bdf7a996a9e26a2131bcd39aa).
 :::
 :::
 
@@ -227,9 +257,23 @@ This workflow is good enough if you're just working on one machine, but if you'r
 
 ## Inviting collaborators {background-color="white" background-image="./figs/git-schema/Slide7.PNG"}
 
-<iframe src="https://app.tango.us/app/embed/550631f4-1a46-4900-88ec-da0ca9bb457b" sandbox="allow-scripts allow-top-navigation-by-user-activation allow-popups allow-same-origin" security="restricted" title="Adding collaborators to a repository" width="100%" height="100%" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen">
+::: r-stack
+::: {.fragment .fade-out}
+![](figs/invite.png){fig-align="center"  width="80%"}
+:::
 
-</iframe>
+::: {.fragment .fade-in-then-out}
+![](figs/invite2.png){fig-align="center"  width="80%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/invite3.png){fig-align="center"  width="80%"}
+:::
+
+::: {.fragment .fade-in}
+![](figs/invite4.png){fig-align="center"  width="80%"}
+:::
+:::
 
 ::: notes
 Then they need to clone locally.
@@ -237,23 +281,31 @@ Then they need to clone locally.
 
 ## Pull from origin {background-color="white" background-image="./figs/git-schema/Slide11.PNG"}
 
-::: r-stack
-::: {.fragment .fade-in-then-out}
-![](figs/pull.png){fig-align="center"}
-:::
-
-::: {.fragment .fade-in-then-out}
-![](figs/pull2.png){fig-align="center"}
-:::
-:::
+![](figs/pull.png){fig-align="center" width="70%"}
 
 ::: aside
 You want to start a work session with a pull to synchronize with changes others may have made in the meantime.
 :::
 
+## Pull from origin {background-color="white" background-image="./figs/git-schema/Slide11.PNG"}
+
+::: r-stack
+::: {.fragment .fade-out}
+![](figs/pull2.png){fig-align="center" width="70%"} 
+:::
+
+::: {.fragment .fade-in}
+![](figs/pull3.png){fig-align="center" width="70%"}
+:::
+:::
+
 ## Branching
 
 ::: r-stack
+::: {.fragment .fade-out}
+![](figs/main.png){fig-align="center" width="80%"}
+:::
+
 ::: {.fragment .fade-in-then-out}
 ![](figs/git-schema/Slide14.png){fig-align="center"}
 :::
@@ -274,99 +326,119 @@ You want to start a work session with a pull to synchronize with changes others 
 ![](figs/git-schema/Slide18.png){fig-align="center"}
 :::
 
-::: {.fragment .fade-in-then-out}
+::: {.fragment .fade-in}
 ![](figs/git-schema/Slide19.png){fig-align="center"}
 :::
-
-::: {.fragment .fade-in-then-out}
-![](figs/branching.png){fig-align="center"}
 :::
 
-::: {.fragment .fade-in-then-out}
-![](figs/branching2.png){fig-align="center"}
-:::
+## Branching {background-color="white" background-image="./figs/git-schema/Slide8.PNG"}
 
-::: {.fragment .fade-in-then-out}
-![](figs/branching3.png){fig-align="center"}
+::: r-stack
+::: {.fragment .fade-out}
+![](figs/branching.png){fig-align="center" width="80%"}
 :::
 
 ::: {.fragment .fade-in-then-out}
-![](figs/branching4.png){fig-align="center"}
+![](figs/branching2.png){fig-align="center" width="80%"}
+:::
+
+::: {.fragment .fade-in}
+![](figs/branching3.png){fig-align="center" width="80%"}
 :::
 :::
+
+## Branching {background-color="white" background-image="./figs/git-schema/Slide7.PNG"}
+
+![](figs/branching4.png){fig-align="center" width="70%"}
 
 ::: aside
 Further reading on branches: section 11 of [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/) by Jenny Bryan
 :::
 
-## Pull request
+## Pull request {background-color="white" background-image="./figs/git-schema/Slide8.PNG"}
+
+::: r-stack
+::: {.fragment .fade-out}
+![](figs/pull-request.png){fig-align="center" width="75%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request2.png){fig-align="center" width="75%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request3.png){fig-align="center" width="75%"}
+:::
+
+::: {.fragment .fade-in}
+![](figs/pull-request4.png){fig-align="center" width="75%"}
+:::
+:::
+
+## Pull request {background-color="white" background-image="./figs/git-schema/Slide7.PNG"}
+
+::: r-stack
+::: {.fragment .fade-out}
+![](figs/pull-request5.png){fig-align="center" width="75%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request6.png){fig-align="center" width="75%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request7.png){fig-align="center" width="75%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request8.png){fig-align="center" width="75%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/pull-request9.png){fig-align="center" width="75%"}
+:::
+
+::: {.fragment .fade-in}
+![](figs/pull-request10.png){fig-align="center" width="75%"}
+:::
+:::
+
+## Pull request {background-color="white" background-image="./figs/git-schema/Slide8.PNG"}
 
 ::: r-stack
 ::: {.fragment .fade-in-then-out}
-![](figs/pull-request.png){fig-align="center"}
-:::
-
-::: {.fragment .fade-in-then-out}
-![](figs/pull-request2.png){fig-align="center"}
-:::
-
-::: {.fragment .fade-in-then-out}
-![](figs/pull-request3.png){fig-align="center"}
-:::
-
-::: {.fragment .fade-in-then-out}
-![](figs/pull-request4.png){fig-align="center"}
-:::
-
-::: {.fragment .fade-in-then-out}
-![](figs/pull-request5.png){fig-align="center"}
-:::
-
-::: {.fragment .fade-in-then-out}
-![](figs/pull-request6.png){fig-align="center"}
-:::
-
-::: {.fragment .fade-in-then-out}
-![](figs/pull-request7.png){fig-align="center"}
-:::
-
-::: {.fragment .fade-in-then-out}
-![](figs/delete-branch.png){fig-align="center"}
+![](figs/delete-branch.png){fig-align="center" width="75%"}
 :::
 
 ::: {.fragment .fade-in-then-out}
 ![](figs/delete-branch2.png){fig-align="center"}
 :::
-
-::: {.fragment .fade-in-then-out}
-![](figs/delete-branch3.png){fig-align="center"}
-:::
 :::
 
 ## Merge conflicts
 
-::: r-stack
-::: {.fragment .fade-in-then-out}
 -   `git` is great at automatically consolidating sets of changes between versions
 -   When it needs help, it creates a [**merge conflict**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts) to flag conflicting changes
     -   *e.g.* when two people make different change to the same part of the same file
 -   Fear not!
+
+## Merge conflicts {background-color="white" background-image="./figs/git-schema/Slide8.PNG"}
+
+::: r-stack
+::: {.fragment .fade-out}
+![](figs/merge-conflict.png){fig-align="center"  width="80%"}
 :::
 
 ::: {.fragment .fade-in-then-out}
-![](figs/merge-conflict.png){fig-align="center"}
+![](figs/merge-conflict2.png){fig-align="center"  width="80%"}
 :::
 
-::: {.fragment .fade-in-then-out}
-![](figs/merge-conflict2.png){fig-align="center"}
-:::
-
-::: {.fragment .fade-in-then-out}
-![](figs/merge-conflict3.png){fig-align="center"}
+::: {.fragment .fade-in}
+![](figs/merge-conflict3.png){fig-align="center"  width="80%"}
 :::
 :::
 
-## Merge conflicts
+## Merge conflicts {background-color="white" background-image="./figs/git-schema/Slide8.PNG"}
 
 ![](figs/merge-conflict4.png){fig-align="center" width="70%"}
 
@@ -378,17 +450,33 @@ Occasionally you may get in too deep with a merge conflict, in which case it may
 
 ## Managing version history
 
-::: r-stack
-::: {.fragment .fade-in-then-out}
 ![](figs/filename-nightmare.PNG){fig-align="center"}
+
+## Managing version history {background-color="white" background-image="./figs/git-schema/Slide7.PNG"}
+
+::: r-stack
+::: {.fragment .fade-out}
+![](figs/file-history.png){fig-align="center" width="70%"}
 :::
 
 ::: {.fragment .fade-in-then-out}
-insert screenshot of file history
+![](figs/file-history2.png){fig-align="center" width="70%"}
 :::
 
 ::: {.fragment .fade-in-then-out}
-![](figs/timeline.png){fig-align="center"}
+![](figs/file-history3.png){fig-align="center" width="70%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](figs/file-history4.png){fig-align="center" width="70%"}
+:::
+
+::: {.fragment .fade-in}
+![](figs/timeline.png){fig-align="center" width="70%"}
+:::
+
+::: {.fragment .fade-in}
+![](figs/timeline2.png){fig-align="center" width="70%"}
 :::
 
 ::: notes
@@ -396,15 +484,15 @@ Also useful for reporting to your collaborators or boss!
 :::
 :::
 
-## Easily go back to a previous version
+## Return to a previous version
 
 ::: r-stack
-::: {.fragment .fade-in-then-out}
-![](figs/rollback.png){fig-align="center"}
+::: {.fragment .fade-out}
+![](figs/teams-chat.jpg){fig-align="center"}
 :::
 
-::: {.fragment .fade-in-then-out}
-![](figs/teams-chat.jpg){fig-align="center"}
+::: {.fragment .fade-in}
+![](figs/rollback.png){fig-align="center" width="70%"}
 :::
 :::
 
@@ -415,12 +503,12 @@ This works best if you write descriptive commit messages...
 ## Collaborate simultaneously
 
 ::: r-stack
-::: {.fragment .fade-in-then-out}
+::: {.fragment .fade-out}
 ![](figs/teams-chat2.jpg){fig-align="center"}
 :::
 
-::: {.fragment .fade-in-then-out}
-diagram of multiple branches
+::: {.fragment .fade-in}
+![](figs/git-schema/Slide23.PNG){fig-align="center"}
 :::
 :::
 
@@ -456,10 +544,12 @@ Issue
 
 ::: incremental
 -   Track changes-like editing/commenting for code and/or text
--   Let's look at an example...
+-   Let's look at [an example](https://github.com/phac-nml-phrsd/ern/pull/154)...
 :::
 
 # Summary of workflow
+
+---
 
 ::: r-stack
 ::: {.fragment .fade-out}
@@ -470,12 +560,15 @@ Issue
 5.  Create a **new branch** from the version of the code where you want to complete this task. The sole purpose of this branch is to address the issue.
 :::
 
-::: fragment
+::: {.fragment .fade-in-then-out}
 6.  **Commit** changes addressing this issue and **push** to remote every so often.
-7.  Once you're satisfied that you've addressed the issue, push one final time, and then open a **pull request**. Use [keywords](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword#linking-a-pull-request-to-an-issue-using-a-keyword) in your pull request to close issues that have been addressed.
+7.  Once you're satisfied that you've addressed the issue, push one final time, pull the latest version of `main` into your working branch, and then open a **pull request**. Use [keywords](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword#linking-a-pull-request-to-an-issue-using-a-keyword) in your pull request to close issues that have been addressed.
 8.  Optionally solicit a **code review** from a collaborator.
-9.  Once any code review is complete, **merge** the pull request into the original branch from which you branched.
+9.  Once any code review and changes are complete, **merge** the pull request into the original branch from which you branched.
 10. **Delete** the new feature branch.
+:::
+
+::: {.fragment .fade-in}
 11. **Rinse and repeat** steps 4-8 until your project is done!
 :::
 :::
@@ -492,3 +585,16 @@ Issue
 ::: aside
 Much of this talk was inspired by these two resources!
 :::
+
+## Thanks!
+
+### Github
+
+[@papsti](https://github.com/papsti)
+
+[@phac-nml-phrsd](https://github.com/phac-nml-phrsd)
+
+### Email
+
+[irena.papst@phac-aspc.gc.ca](irena.papst@phac-aspc.gc.ca)
+
