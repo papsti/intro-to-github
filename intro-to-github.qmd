@@ -19,8 +19,7 @@ It features clickable links for further reading or future reference.
 
 ## Filename nightmares
 
-<br>
-<br>
+<br> <br>
 
 ![](figs/filename-nightmare.PNG){fig-align="center" width="50%"}
 
@@ -30,8 +29,7 @@ It features clickable links for further reading or future reference.
 
 ## Collaboration pain
 
-<br>
-<br>
+<br> <br>
 
 ![](figs/teams-chat2.jpg){fig-align="center"}
 
@@ -82,15 +80,15 @@ There are many ways of working with git / GitHub, but this is a useful basic wor
 
 ::: r-stack
 ::: {.fragment .fade-in-then-out}
-![](figs/create-repo.png){fig-align="center"}
+![](figs/create-repo.png){fig-align="center" width="80%"}
 :::
 
 ::: {.fragment .fade-in-then-out}
-![](figs/create-repo2.png){fig-align="center"}
+![](figs/create-repo2.png){fig-align="center" width="80%"}
 :::
 
 ::: {.fragment .fade-in}
-![](figs/create-repo3.png){fig-align="center"}
+![](figs/create-repo3.png){fig-align="center" width="80%"}
 :::
 :::
 
@@ -116,13 +114,12 @@ You can also have an RMarkdown file generate your README with executed R code in
 
 ## "Clone" a copy of the repo locally {background-color="white" background-image="./figs/git-schema/Slide2.PNG"}
 
-
 ::: r-stack
-::: {.fragment .fade-in-then-out}
+::: {.fragment .fade-out}
 ![](figs/clone-repo.png){fig-align="center" width="80%"}
 :::
 
-::: {.fragment .fade-in-then-out}
+::: {.fragment .fade-in}
 ![](figs/clone-repo2.png){fig-align="center" width="80%"}
 :::
 :::
@@ -130,15 +127,15 @@ You can also have an RMarkdown file generate your README with executed R code in
 ## "Clone" a copy of the repo locally {background-color="white" background-image="./figs/git-schema/Slide3.PNG"}
 
 ::: r-stack
-::: {.fragment .fade-in-then-out}
+::: {.fragment .fade-out}
 ![](figs/clone-repo3.png){fig-align="center" width="80%"}
 :::
 
-::: {.fragment .fade-out}
+::: {.fragment .fade-out-then-in}
 ![](figs/clone-repo4.png){fig-align="center" width="80%"}
 :::
 
-::: {.fragment .fade-in-then-out}
+::: {.fragment .fade-in}
 ![](figs/clone-repo5.png){fig-align="center" width="80%"}
 :::
 :::
@@ -233,11 +230,11 @@ Diffs allow us to quickly see what's changed in a file from the previous version
 
 ## Push your changes {background-color="white" background-image="./figs/git-schema/Slide4.PNG"}
 
-::: r-stack
-::: {.fragment .fade-out}
 ![](figs/push.png){fig-align="center" width="80%"}
-:::
 
+## Push your changes {background-color="white" background-image="./figs/git-schema/Slide2.PNG"}
+
+::: r-stack
 ::: {.fragment .fade-in-then-out}
 ![](figs/push2.png){fig-align="center" width="80%"}
 :::
@@ -259,19 +256,19 @@ This workflow is good enough if you're just working on one machine, but if you'r
 
 ::: r-stack
 ::: {.fragment .fade-out}
-![](figs/invite.png){fig-align="center"  width="80%"}
+![](figs/invite.png){fig-align="center" width="80%"}
 :::
 
 ::: {.fragment .fade-in-then-out}
-![](figs/invite2.png){fig-align="center"  width="80%"}
+![](figs/invite2.png){fig-align="center" width="80%"}
 :::
 
 ::: {.fragment .fade-in-then-out}
-![](figs/invite3.png){fig-align="center"  width="80%"}
+![](figs/invite3.png){fig-align="center" width="80%"}
 :::
 
 ::: {.fragment .fade-in}
-![](figs/invite4.png){fig-align="center"  width="80%"}
+![](figs/invite4.png){fig-align="center" width="80%"}
 :::
 :::
 
@@ -291,7 +288,7 @@ You want to start a work session with a pull to synchronize with changes others 
 
 ::: r-stack
 ::: {.fragment .fade-out}
-![](figs/pull2.png){fig-align="center" width="70%"} 
+![](figs/pull2.png){fig-align="center" width="70%"}
 :::
 
 ::: {.fragment .fade-in}
@@ -426,15 +423,15 @@ Further reading on branches: section 11 of [Excuse me, do you have a moment to t
 
 ::: r-stack
 ::: {.fragment .fade-out}
-![](figs/merge-conflict.png){fig-align="center"  width="80%"}
+![](figs/merge-conflict.png){fig-align="center" width="80%"}
 :::
 
 ::: {.fragment .fade-in-then-out}
-![](figs/merge-conflict2.png){fig-align="center"  width="80%"}
+![](figs/merge-conflict2.png){fig-align="center" width="80%"}
 :::
 
 ::: {.fragment .fade-in}
-![](figs/merge-conflict3.png){fig-align="center"  width="80%"}
+![](figs/merge-conflict3.png){fig-align="center" width="80%"}
 :::
 :::
 
@@ -549,7 +546,7 @@ Issue
 
 # Summary of workflow
 
----
+------------------------------------------------------------------------
 
 ::: r-stack
 ::: {.fragment .fade-out}
@@ -590,11 +587,10 @@ Much of this talk was inspired by these two resources!
 
 ### Github
 
-[@papsti](https://github.com/papsti)
+[\@papsti](https://github.com/papsti)
 
-[@phac-nml-phrsd](https://github.com/phac-nml-phrsd)
+[\@phac-nml-phrsd](https://github.com/phac-nml-phrsd)
 
 ### Email
 
-[irena.papst@phac-aspc.gc.ca](irena.papst@phac-aspc.gc.ca)
-
+[irena.papst\@phac-aspc.gc.ca](irena.papst@phac-aspc.gc.ca)
