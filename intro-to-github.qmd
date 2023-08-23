@@ -4,6 +4,7 @@ author: "Irena Papst"
 format: 
   revealjs:
     auto-stretch: false
+    self-contained: true
 editor: visual
 title-slide-attributes:
   data-background-image: figs/git-schema/Slide22.PNG
@@ -12,6 +13,8 @@ title-slide-attributes:
 ---
 
 This talk is available online here:
+
+[https://papsti.github.io/talks/2023-08-23_intro-to-github.html](https://papsti.github.io/talks/2023-08-23_intro-to-github.html)
 
 ::: aside
 It features clickable links for further reading or future reference.
